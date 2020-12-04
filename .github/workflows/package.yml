@@ -15,11 +15,14 @@ jobs:
     - uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
-    - name: Build package for ${{ matrix.os }}
+    - name: setup build env
       shell: bash -l {0}
       run: |
         conda install conda-build anaconda-client
-        conda list
+    - name: Build package for ${{ matrix.os }}
+      shell: bash -l {0}
+      run: |
+        conda build .
 
   build-windows:
     runs-on: windows-latest
@@ -28,8 +31,11 @@ jobs:
     - uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
-    - name: Build package for windows
+    - name: setup build env
       shell: pwsh
       run: |
         conda install conda-build anaconda-client
-        conda list
+    - name: Build package for windows
+      shell: pwsh
+      run: |
+        conda build .
