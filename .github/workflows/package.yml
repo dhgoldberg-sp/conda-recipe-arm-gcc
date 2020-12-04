@@ -1,34 +1,35 @@
 name: Build Conda Packages
 
-on:
-  release:
-    types: [published]
+on: push
 
 jobs:
   build-x:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup build environment
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+    - name: Build package for ${{ matrix.os }}
+      shell: bash -l {0}
       run: |
-        $CONDA/bin/conda env update --file environment.yml --name base
-    - name: Build Package ${{ matrix.os }}
-      run: |
-        $CONDA/bin/conda build .
+        conda install conda-build anaconda-client
+        conda list
 
   build-windows:
     runs-on: windows-latest
-
     steps:
     - uses: actions/checkout@v2
-    - name: Setup build environment
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+    - name: Build package for windows
+      shell: pwsh
       run: |
-        C:\Miniconda\condabin\conda.bat env update --file environment.yml --name base
-        C:\Miniconda\condabin\conda.bat init powershell
-    - name: Build Package Windows
-      run: |
-        C:\Miniconda\condabin\conda.bat build .
+        conda install conda-build anaconda-client
+        conda list
