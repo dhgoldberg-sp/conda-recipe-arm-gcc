@@ -1,6 +1,9 @@
 name: Build Conda Packages
 
-on: push
+on:
+  push:
+    paths:
+    - 'meta.yaml'
 
 jobs:
   build-x:
