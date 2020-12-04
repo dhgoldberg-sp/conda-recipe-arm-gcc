@@ -1,0 +1,34 @@
+name: Build Conda Packages
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-x:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup build environment
+      run: |
+        $CONDA/bin/conda env update --file environment.yml --name base
+    - name: Build Package ${{ matrix.os }}
+      run: |
+        $CONDA/bin/conda build .
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup build environment
+      run: |
+        C:\Miniconda\condabin\conda.bat env update --file environment.yml --name base
+        C:\Miniconda\condabin\conda.bat init powershell
+    - name: Build Package Windows
+      run: |
+        C:\Miniconda\condabin\conda.bat build .
