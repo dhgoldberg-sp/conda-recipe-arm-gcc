@@ -21,8 +21,12 @@ jobs:
         conda install conda-build anaconda-client
     - name: Build package for ${{ matrix.os }}
       shell: bash -l {0}
+      env:
+        ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
       run: |
+        conda config --set anaconda_upload yes
         conda build .
+
 
   build-windows:
     runs-on: windows-latest
@@ -37,5 +41,8 @@ jobs:
         conda install conda-build anaconda-client
     - name: Build package for windows
       shell: pwsh
+      env:
+        ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
       run: |
+        conda config --set anaconda_upload yes
         conda build .
