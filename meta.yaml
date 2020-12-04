@@ -1,17 +1,17 @@
 package:
   name: gcc-arm-none-eabi
-  version: 6.2017.q2.update
+  version: 8.2019.q3.update
 
 source:
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-mac.tar.bz2 # [osx]
-  md5: d536d7fb167c04b24f7f0d40cd739cac # [osx]
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2 # [linux64]
-  md5: 13747255194398ee08b3ba42e40e9465 # [linux64]
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-win32.zip # [win]
-  md5: df6c2f763a6114c951e3f1e509af3cbc # [win]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/8-2019q3/RC1.1/gcc-arm-none-eabi-8-2019-q3-update-mac.tar.bz2 # [osx]
+  md5: 405cfbe54cee25a1b925ad0657f73924 # [osx]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/8-2019q3/RC1.1/gcc-arm-none-eabi-8-2019-q3-update-linux.tar.bz2 # [linux64]
+  md5: 6341f11972dac8de185646d0fbd73bfc # [linux64]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/8-2019q3/RC1.1/gcc-arm-none-eabi-8-2019-q3-update-win32.zip # [win]
+  md5: 5fa382a547abe0b0d5c0a6e9eaa75c7b # [win]
 
 build:
-  string: '0'
+  number: 0
   binary_relocation: False
   missing_dso_whitelist: '*'
 
