@@ -1,14 +1,14 @@
 package:
   name: gcc-arm-none-eabi
-  version: 9.2020.q2.update
+  version: 10.3.2021.07
 
 source:
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-mac.tar.bz2 # [osx]
-  md5: 75a171beac35453fd2f0f48b3cb239c3 # [osx]
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2 # [linux64]
-  md5: 2b9eeccc33470f9d3cda26983b9d2dc6 # [linux64]
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-win32.zip # [win]
-  md5: 184b3397414485f224e7ba950989aab6 # [win]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.07/gcc-arm-none-eabi-10.3-2021.07-mac-10.14.6.tar.bz2 # [osx]
+  md5: 42d5f143cdc303d73a3602fa5052c790 # [osx]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.07/gcc-arm-none-eabi-10.3-2021.07-x86_64-linux.tar.bz2 # [linux64]
+  md5: b56ae639d9183c340f065ae114a30202 # [linux64]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.07/gcc-arm-none-eabi-10.3-2021.07-win32.zip # [win]
+  md5: 433921722a948ceb0890edf7826be5b3 # [win]
 
 build:
   number: 0
