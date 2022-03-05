@@ -1,14 +1,14 @@
 package:
   name: gcc-arm-none-eabi
-  version: 10.3.2021.07
+  version: 10.3.2021.10
 
 source:
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.07/gcc-arm-none-eabi-10.3-2021.07-mac-10.14.6.tar.bz2 # [osx]
-  md5: 42d5f143cdc303d73a3602fa5052c790 # [osx]
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.07/gcc-arm-none-eabi-10.3-2021.07-x86_64-linux.tar.bz2 # [linux64]
-  md5: b56ae639d9183c340f065ae114a30202 # [linux64]
-  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.07/gcc-arm-none-eabi-10.3-2021.07-win32.zip # [win]
-  md5: 433921722a948ceb0890edf7826be5b3 # [win]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-mac.tar.bz2 # [osx]
+  md5: 7f2a7b7b23797302a9d6182c6e482449 # [osx]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 # [linux64]
+  md5: 2383e4eb4ea23f248d33adc70dc3227e # [linux64]
+  url: https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-win32.zip # [win]
+  md5: 2bc8f0c4c4659f8259c8176223eeafc1 # [win]
 
 build:
   number: 0
